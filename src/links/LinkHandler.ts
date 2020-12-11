@@ -80,11 +80,13 @@ export abstract class LinkHandler {
     }
 
     protected getMatchingServerUrl(remoteUrl: string): ServerUrl | undefined {
+        // if (this.getServerUrls.length > 0) {
         return this.getServerUrls().filter(
             (x) =>
                 remoteUrl.startsWith(x.baseUrl) ||
                 remoteUrl.startsWith(x.sshUrl)
         )[0];
+        // }
     }
 
     private fixRemoteUrl(remoteUrl: string): string {

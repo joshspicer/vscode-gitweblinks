@@ -7,6 +7,7 @@ import { GitHubHandler } from './GitHubHandler';
 import { GitLabHandler } from './GitLabHandler';
 import { LinkHandler } from './LinkHandler';
 import { VisualStudioTeamServicesHandler } from './VisualStudioTeamServicesHandler';
+import { DevDivHandler } from './DevDivHandler';
 import { Logger } from '../utilities/Logger';
 
 export class LinkHandlerFinder {
@@ -20,7 +21,8 @@ export class LinkHandlerFinder {
             new BitbucketServerHandler(),
             new GitHubHandler(),
             new GitLabHandler(),
-            new VisualStudioTeamServicesHandler()
+            new VisualStudioTeamServicesHandler(),
+            new DevDivHandler()
         ];
     }
 
